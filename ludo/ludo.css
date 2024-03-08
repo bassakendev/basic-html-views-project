@@ -1,0 +1,311 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jeu {
+    border: 2px solid black;
+    box-shadow: 3px 13px 6px black;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border-radius: 10%;
+    display: flex;
+    margin-top: 12vh;
+}
+
+#centre {
+    position: absolute;
+    background: linear-gradient(180deg, green 24%, white 24%, white 25%, red 25%, red 49%, white 49%, white 50%, blue 50%, blue 74%, white 74%, white 75%, yellow 75%, yellow 100%);
+    border-color: beige;
+    width: 26%;
+    height: 26%;
+    margin: 37% 0% 0% 37%;
+    border-radius: 50%;
+}
+
+.carreau {
+    border: 1px solid rgb(129, 129, 129);
+    color: white;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pions {
+    width: 18%;
+    height: 18%;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+}
+
+
+/* gestion du verte */
+
+#caseV {
+    position: absolute;
+    background-color: green;
+    width: 37%;
+    height: 37%;
+    margin-left: 63%;
+    border-top-right-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#maisonV {
+    width: 75%;
+    height: 75%;
+    border-radius: 10%;
+    background-color: rgb(105, 179, 105);
+    position: relative;
+}
+
+#circulationV {
+    position: absolute;
+    width: 26%;
+    height: 37%;
+    margin-left: 37%;
+    display: grid;
+    grid-template-rows: repeat(6, 6fr);
+    grid-template-columns: repeat(3, 6fr);
+}
+
+#circulationV .carreau:nth-child(5),
+#circulationV .carreau:nth-child(6),
+#circulationV .carreau:nth-child(8),
+#circulationV .carreau:nth-child(11),
+#circulationV .carreau:nth-child(14),
+#circulationV .carreau:nth-child(17) {
+    background-color: green;
+}
+
+#maisonV .pions {
+    background-color: green;
+}
+
+#maisonV .pion1 {
+    top: 5%;
+    left: 5%;
+}
+
+#maisonV .pion2 {
+    top: 5%;
+    left: 75%;
+}
+
+#maisonV .pion3 {
+    top: 75%;
+    left: 5%;
+}
+
+#maisonV .pion4 {
+    top: 75%;
+    left: 75%;
+}
+
+
+/* gestion du bleu */
+
+#caseB {
+    position: absolute;
+    background-color: blue;
+    width: 37%;
+    height: 37%;
+    border-top-left-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#maisonB {
+    width: 75%;
+    height: 75%;
+    border-radius: 10%;
+    background-color: rgb(129, 129, 233);
+    position: relative;
+}
+
+#circulationB {
+    position: absolute;
+    width: 37%;
+    height: 26%;
+    margin-top: 37%;
+    display: grid;
+    grid-template-rows: repeat(3, 6fr);
+    grid-template-columns: repeat(6, 6fr);
+}
+
+#circulationB .carreau:nth-child(2),
+#circulationB .carreau:nth-child(8),
+#circulationB .carreau:nth-child(9),
+#circulationB .carreau:nth-child(10),
+#circulationB .carreau:nth-child(11),
+#circulationB .carreau:nth-child(12) {
+    background-color: blue;
+}
+
+#maisonB .pions {
+    background-color: blue;
+}
+
+#maisonB .pion1 {
+    top: 5%;
+    left: 5%;
+}
+
+#maisonB .pion2 {
+    top: 5%;
+    left: 75%;
+}
+
+#maisonB .pion3 {
+    top: 75%;
+    left: 5%;
+}
+
+#maisonB .pion4 {
+    top: 75%;
+    left: 75%;
+}
+
+
+/* gestion du jaune */
+
+#caseJ {
+    position: absolute;
+    background-color: yellow;
+    width: 37%;
+    height: 37%;
+    margin-top: 63%;
+    border-bottom-left-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#maisonJ {
+    width: 75%;
+    height: 75%;
+    border-radius: 10%;
+    background-color: rgb(209, 209, 123);
+    position: relative;
+}
+
+#circulationJ {
+    position: absolute;
+    width: 26%;
+    height: 37%;
+    margin-left: 37%;
+    margin-top: 63%;
+    display: grid;
+    grid-template-rows: repeat(6, 6fr);
+    grid-template-columns: repeat(3, 6fr);
+}
+
+#circulationJ .carreau:nth-child(2),
+#circulationJ .carreau:nth-child(5),
+#circulationJ .carreau:nth-child(8),
+#circulationJ .carreau:nth-child(11),
+#circulationJ .carreau:nth-child(13),
+#circulationJ .carreau:nth-child(14) {
+    background-color: yellow;
+}
+
+#maisonJ .pions {
+    background-color: yellow;
+}
+
+#maisonJ .pion1 {
+    top: 5%;
+    left: 5%;
+}
+
+#maisonJ .pion2 {
+    top: 5%;
+    left: 75%;
+}
+
+#maisonJ .pion3 {
+    top: 75%;
+    left: 5%;
+}
+
+#maisonJ .pion4 {
+    top: 75%;
+    left: 75%;
+}
+
+
+/* gestion du rouge */
+
+#caseR {
+    position: absolute;
+    background-color: red;
+    width: 37%;
+    height: 37%;
+    margin: 63% 0% 0% 63%;
+    border-bottom-right-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#maisonR {
+    width: 75%;
+    height: 75%;
+    border-radius: 10%;
+    background-color: rgb(199, 107, 107);
+    position: relative;
+}
+
+#circulationR {
+    position: absolute;
+    width: 37%;
+    height: 26%;
+    margin-top: 37%;
+    margin-left: 63%;
+    display: grid;
+    grid-template-rows: repeat(3, 6fr);
+    grid-template-columns: repeat(6, 6fr);
+}
+
+#circulationR .carreau:nth-child(7),
+#circulationR .carreau:nth-child(8),
+#circulationR .carreau:nth-child(9),
+#circulationR .carreau:nth-child(10),
+#circulationR .carreau:nth-child(11),
+#circulationR .carreau:nth-child(17) {
+    background-color: red;
+}
+
+#maisonR .pions {
+    background-color: red;
+}
+
+#maisonR .pion1 {
+    top: 5%;
+    left: 5%;
+}
+
+#maisonR .pion2 {
+    top: 5%;
+    left: 75%;
+}
+
+#maisonR .pion3 {
+    top: 75%;
+    left: 5%;
+}
+
+#maisonR .pion4 {
+    top: 75%;
+    left: 75%;
+}
+
+
+/* fin */
